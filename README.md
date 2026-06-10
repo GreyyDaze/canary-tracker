@@ -60,17 +60,20 @@ Attacker modifies/deletes file → event fires → suppress if self-inflicted
 ## Quick Start
 
 ```bash
-cd ~/Desktop/projects/canary-tracker
+git clone https://github.com/GreyyDaze/canary-tracker.git
+cd canary-tracker
 dotnet run
 ```
 
-Open http://localhost:5193. Click **Deploy AWS Key**, then:
+Running at `http://localhost:5193` in under 30 seconds.
+
+**Test it:** Click **Deploy AWS Key**, then in a terminal:
 
 ```bash
 echo "stolen" >> ~/.config/canary/aws-prod-key-*/credentials
 ```
 
-Alert appears within 3 seconds.
+Alert appears on the dashboard within 3 seconds.
 
 ---
 
