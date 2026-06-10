@@ -79,9 +79,13 @@ Alert appears on the dashboard within 3 seconds.
 
 ## What I Learned
 
-- macOS doesn't expose file reads — detection has to happen at the infrastructure layer (API calls, SSH auth, etc.)
-- Deploy suppression requires tracking state per canary, not globally
-- HTMX polling is surprisingly elegant for live dashboards — no WebSocket, no JS framework
+**Problem space:**
+- macOS doesn't expose file reads — detection has to happen at the infrastructure layer.
+- Deploy suppression requires tracking state per canary, not globally.
+- Process enrichment via `lsof` is fragile — fast commands finish before you can query them.
+
+**Approach:**
+- I broke down what the product space needed — file watching, persistence, background processing, a live UI — then learned only those C#/.NET primitives by mapping them to frameworks I already knew.
 
 If I had more time:
 
