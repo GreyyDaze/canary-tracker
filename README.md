@@ -92,4 +92,4 @@ I'm a builder exploring detection infrastructure. This prototype covers the loca
 
 I'd love to hear what I got wrong.
 
-[LinkedIn] · [Email]
+[LinkedIn](https://www.linkedin.com/in/aminah-rashid) · [Email](mailto:aminahrashid.bscs.iba@gmail.com)
