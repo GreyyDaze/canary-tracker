@@ -50,10 +50,7 @@ Attacker modifies/deletes file → event fires → suppress if self-inflicted
 
 ## Demo
 
-<!-- TODO: Record 10-15 second GIF -->
-<!-- Show: click Deploy AWS Key → echo "stolen" >> credentials file → alert pops up on dashboard -->
-
-> _(GIF placeholder — 10 seconds. Record with ScreenToGif or QuickTime before sending.)_
+<video src="demo/demo.webm" controls width="720"></video>
 
 ---
 
