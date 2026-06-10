@@ -41,11 +41,19 @@ Attacker modifies/deletes file → event fires → suppress if self-inflicted
 
 **Tech stack:** .NET 10 · SQLite (EF Core) · HTMX 2.0
 
+- File writes trigger OS-level kqueue events — captured by FileSystemWatcher
+- Deploy suppression uses a per-canary timestamp window so our own writes don't alert
+- lsof enriches alerts with process info when it catches the process in time
+- HTMX polls three sections (stats, canaries, alerts) every 3-5 seconds — no WebSockets, no JS framework
+
 ---
 
 ## Demo
 
-> _(10-15 second GIF: click Deploy AWS Key → echo a line to the file in terminal → alert appears on dashboard)_
+<!-- TODO: Record 10-15 second GIF -->
+<!-- Show: click Deploy AWS Key → echo "stolen" >> credentials file → alert pops up on dashboard -->
+
+> _(GIF placeholder — 10 seconds. Record with ScreenToGif or QuickTime before sending.)_
 
 ---
 
@@ -74,7 +82,7 @@ Alert appears within 3 seconds.
 
 If I had more time:
 
-- Add more canary types (browser cookies, password manager entries, email trackers not just file credentials
+- Add more canary types (browser cookies, password manager entries, email trackers) — not just file credentials
 - Add AI-generated canary content that looks convincingly real per environment
 - Push deploy/detect/alert into a lightweight CLI so you don't need the browser at all
 - Add a lightweight agent that deploys canaries across multiple machines and reports alerts back to a central dashboard
@@ -88,7 +96,7 @@ If I had more time:
 
 ## About Me
 
-I'm a builder exploring detection infrastructure. This prototype covers the local foundation — I know the hard problems live in the AI layer, remote deployment, and scale.
+Aminah Rashid — builder exploring detection infrastructure. This prototype covers the local foundation — I know the hard problems live in the AI layer, remote deployment, and scale.
 
 I'd love to hear what I got wrong.
 
