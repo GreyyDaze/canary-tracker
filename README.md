@@ -50,7 +50,9 @@ Attacker modifies/deletes file → event fires → suppress if self-inflicted
 
 ## Demo
 
-[![Watch demo on Vimeo](demo/thumbnail.jpg)](https://vimeo.com/1200099717)
+![Demo: deploy → modify file → alert appears](demo/demo.gif)
+
+[▶️ Watch on Vimeo](https://vimeo.com/1200099717) (higher quality)
 
 ---
 
